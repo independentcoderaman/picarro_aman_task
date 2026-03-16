@@ -1,0 +1,9 @@
+{
+  "1001": {
+    "companyName": "New Customer",
+    "plan": "Starter",
+    "seatLimit": 10,
+    "contractMonths": 12
+  }
+}
+
