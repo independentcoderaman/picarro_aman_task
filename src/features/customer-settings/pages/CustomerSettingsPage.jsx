@@ -31,6 +31,7 @@ function CustomerSettingsPage() {
     draft,
     savedSettings,
     toast,
+    retryMeta,
     handleRetry,
     handleEnterEditMode,
     handleUpdateField,
@@ -82,6 +83,7 @@ function CustomerSettingsPage() {
             fetchStatus={state.fetchStatus}
             retryCount={state.retryCount}
             activeScenario={activeScenario}
+            retryMeta={retryMeta}
             onRetry={handleRetry}
           />
 

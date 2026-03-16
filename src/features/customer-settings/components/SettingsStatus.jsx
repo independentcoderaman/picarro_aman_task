@@ -8,6 +8,7 @@ export const SettingsStatus = memo(function SettingsStatus({
   fetchStatus,
   retryCount,
   activeScenario,
+  retryMeta,
   onRetry,
 }) {
   if (fetchStatus === REQUEST_STATE.loading) {
@@ -17,8 +18,13 @@ export const SettingsStatus = memo(function SettingsStatus({
   if (fetchStatus === REQUEST_STATE.failed && activeScenario === 'get-fail-always') {
     return (
       <ErrorState
-        message="Demo scenario: load is forced to fail. Retry stays available for repeated testing."
+        message={
+          retryMeta?.isBlocked
+            ? `Demo scenario: load is forced to fail. Retry limit reached. Please wait ${retryMeta.remainingLabel} before trying again.`
+            : `Demo scenario: load is forced to fail. You can retry ${retryMeta?.retriesRemaining ?? 5} more time(s) before a 10 minute cooldown is applied.`
+        }
         actionLabel="Retry"
+        actionDisabled={retryMeta?.isBlocked}
         onAction={onRetry}
       />
     );

@@ -13,4 +13,5 @@ export const TOAST_VARIANTS = {
 
 export const STORAGE_KEYS = {
   customerSettings: 'customer-account-settings-db',
+  demoRetryLimiter: 'customer-account-settings-demo-retry-limiter',
 };
