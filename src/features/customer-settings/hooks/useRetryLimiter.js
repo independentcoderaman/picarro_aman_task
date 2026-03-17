@@ -4,7 +4,7 @@ import {
   getRetryLimiterSnapshot,
   registerRetryAttempt,
 } from '../utils/retryLimiter';
-
+//This hook is for your retry limit when data is failed to load from api
 export function useRetryLimiter(enabled) {
   const [snapshot, setSnapshot] = useState(() => getRetryLimiterSnapshot());
 

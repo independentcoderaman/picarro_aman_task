@@ -1,8 +1,8 @@
 import { memo } from 'react';
-import { ErrorState } from '../../../shared/components/ErrorState/ErrorState';
-import { Loader } from '../../../shared/components/Loader/Loader';
-import { REQUEST_STATE } from '../../../shared/constants/app.constants';
-import { CUSTOMER_SETTINGS_ERROR_COPY } from '../constants/customerSettings.constants';
+import { ErrorState } from '../../../../shared/components/ErrorState/ErrorState';
+import { Loader } from '../../../../shared/components/Loader/Loader';
+import { REQUEST_STATE } from '../../../../shared/constants/app.constants';
+import { CUSTOMER_SETTINGS_ERROR_COPY } from '../../constants/customerSettings.constants';
 
 export const SettingsStatus = memo(function SettingsStatus({
   fetchStatus,

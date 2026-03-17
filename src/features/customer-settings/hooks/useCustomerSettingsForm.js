@@ -2,7 +2,7 @@ import { useCallback, useMemo, useState } from 'react';
 import { sanitizeIntegerInput, sanitizeTextInput } from '../../../shared/utils/sanitization';
 import { hasValidationErrors, validateCustomerSettings } from '../../../shared/utils/validation';
 /*
-This hook is purely responsible for handling the form and it's actions
+This hook is purely responsible for handling the form inputs and it's actions
 */
 const DEFAULT_TOUCHED_STATE = {
   companyName: false,

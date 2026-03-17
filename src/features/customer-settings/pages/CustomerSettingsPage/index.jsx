@@ -1,13 +1,13 @@
 import { useLocation } from 'react-router-dom';
-import { Toast } from '../../../shared/components/Toast/Toast';
-import { REQUEST_STATE } from '../../../shared/constants/app.constants';
-import { useToast } from '../../../shared/hooks/useToast';
-import { CustomerSettingsForm } from '../components/CustomerSettingsForm';
-import { CustomerSettingsView } from '../components/CustomerSettingsView';
-import { SettingsHeader } from '../components/SettingsHeader';
-import { SettingsStatus } from '../components/SettingsStatus';
-import { useCustomerSettings } from '../hooks/useCustomerSettings';
-import { getActiveScenario, getScenarioDetails } from '../utils/mockScenario';
+import { Toast } from '../../../../shared/components/Toast/Toast';
+import { REQUEST_STATE } from '../../../../shared/constants/app.constants';
+import { useToast } from '../../../../shared/hooks/useToast';
+import { CustomerSettingsForm } from '../../components/CustomerSettingsForm';
+import { CustomerSettingsView } from '../../components/CustomerSettingsView';
+import { SettingsHeader } from '../../components/SettingsHeader';
+import { SettingsStatus } from '../../components/SettingsStatus';
+import { useCustomerSettings } from '../../hooks/useCustomerSettings';
+import { getActiveScenario, getScenarioDetails } from '../../utils/mockScenario';
 import {
   Card,
   Eyebrow,

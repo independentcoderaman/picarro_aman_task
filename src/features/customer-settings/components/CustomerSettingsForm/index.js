@@ -1,12 +1,13 @@
 import { memo, useEffect, useMemo } from 'react';
-import { Input } from '../../../shared/components/Input/Input';
-import { NumberInput } from '../../../shared/components/NumberInput/NumberInput';
-import { Select } from '../../../shared/components/Select/Select';
-import { REQUEST_STATE } from '../../../shared/constants/app.constants';
-import { PLAN_OPTIONS } from '../constants/customerSettings.constants';
-import { useCustomerSettingsForm } from '../hooks/useCustomerSettingsForm';
-import { SettingsActions } from './SettingsActions';
+import { Input } from '../../../../shared/components/Input/Input';
+import { NumberInput } from '../../../../shared/components/NumberInput/NumberInput';
+import { Select } from '../../../../shared/components/Select/Select';
+import { REQUEST_STATE } from '../../../../shared/constants/app.constants';
+import { PLAN_OPTIONS } from '../../constants/customerSettings.constants';
+import { useCustomerSettingsForm } from '../../hooks/useCustomerSettingsForm';
+import { SettingsActions } from '../SettingsActions';
 import { Form, FormGrid } from './CustomerSettingsForm.styles';
+
 /*
 This component builds your settings/edit form when clicked on edit, also we are using useCustomerSettingsForm to get
 all the required function to handle this form eg: handleInput but customized for each type of input also handles error
@@ -38,7 +39,7 @@ export const CustomerSettingsForm = memo(function CustomerSettingsForm({
 
   const isSaving = saveStatus === REQUEST_STATE.loading;
 
-  const fieldConfig = useMemo( //This is our collection of fields that will be rendered in the form
+  const fieldConfig = useMemo(
     () => [
       {
         id: 'company-name',
@@ -112,9 +113,9 @@ export const CustomerSettingsForm = memo(function CustomerSettingsForm({
     <Form onSubmit={handleSubmit} noValidate>
       <FormGrid>
         {fieldConfig.map((fieldConfigItem) => {
-          const FieldRenderer = fieldConfigItem.component;
+          const FieldRenderer = fieldConfigItem.component; //This is the component from your object
 
-          return <FieldRenderer key={fieldConfigItem.id} {...fieldConfigItem} />;
+          return <FieldRenderer key={fieldConfigItem.id} {...fieldConfigItem} />; //Component called and rendered with props given in object
         })}
       </FormGrid>
 

@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import { Button } from '../../../shared/components/Button/Button';
+import { Button } from '../../../../shared/components/Button/Button';
 import { Icon, Shell, Subtitle, Title } from './SettingsHeader.styles';
 
 export const SettingsHeader = memo(function SettingsHeader({ customerId, mode, onEdit }) {

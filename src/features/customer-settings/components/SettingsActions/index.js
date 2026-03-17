@@ -1,6 +1,6 @@
 import { memo } from 'react';
-import { Button } from '../../../shared/components/Button/Button';
-import { Loader } from '../../../shared/components/Loader/Loader';
+import { Button } from '../../../../shared/components/Button/Button';
+import { Loader } from '../../../../shared/components/Loader/Loader';
 import { SaveStatus, Shell } from './SettingsActions.styles';
 
 export const SettingsActions = memo(function SettingsActions({

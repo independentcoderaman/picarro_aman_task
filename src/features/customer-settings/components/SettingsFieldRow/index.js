@@ -1,5 +1,6 @@
 import { memo } from 'react';
 import { Label, Row, Value } from './SettingsFieldRow.styles';
+
 /*
 This component is responsible to create your individual row of settings table on settings page
 */
